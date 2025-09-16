@@ -85,3 +85,15 @@ ssh -i ~/.ssh/id_rsa user@your_server_ip
 
 ---
 Теперь вы успешно создали сертификат и используете его для безопасного подключения к серверу Ubuntu по SSH с компьютера под управлением Windows.
+
+Дополнительно можно создать файл config для алиасов. Пример содержимого такого файла:
+
+Host gitlab
+    HostName 192.168.1.2
+    User devops
+    IdentityFile ~/.ssh/gitlab_rsa
+
+Host psql
+    HostName 192.168.1.3
+    User devops
+    IdentityFile ~/.ssh/psql_rsa
